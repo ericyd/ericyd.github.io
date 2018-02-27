@@ -14,6 +14,13 @@
     "caption": "Experience"
   },
   {
+    "href": "/geology/",
+    "internal": true,
+    "target": "geology",
+    "id": "geology",
+    "caption": "Geology"
+  },
+  {
     "href": "http://github.com/ericyd",
     "internal": false,
     "target": "",
@@ -35,10 +42,10 @@
     "caption": "Soundcloud"
   },
   {
-    "href": "/geology/",
-    "internal": true,
-    "target": "geology",
-    "id": "geology",
-    "caption": "Geology"
+    "href": "http://www.linkedin.com/in/ericdauenhauer",
+    "internal": false,
+    "target": "",
+    "id": "linkedin",
+    "caption": "LinkedIn"
   }
 ]
