@@ -1,0 +1,67 @@
+/* * * * * * * * * * * * * * * * 
+ * 
+ * General page style
+ * 
+ * * * * * * * * * * * * * * * */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  line-height: 1.35em;
+}
+
+body {
+  background: $body-bg;
+  font-family: $font-family-body;
+  font-size: $font-size-base;
+}
+
+/* * * * * * * * * * * * * * * * 
+ * 
+ * Header style elements
+ * 
+ * * * * * * * * * * * * * * * */
+
+#footer {
+  background: $gray-dark;
+  text-align: center;
+  clear: both;
+}
+
+.copyright {
+  padding: 0 0 2em 0;
+  font-size: 1em;
+  color: $gray-light;
+
+  @include for-print {
+    display: none;
+  }
+}
+
+/* * * * * * * * * * * * * * * * 
+ * 
+ * Page elements
+ * 
+ * * * * * * * * * * * * * * * */
+
+p {
+  padding-bottom: 0.75em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.img--home {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    margin: auto;
+    @include for-tablet-portrait-up {
+      max-width: 75%;
+    }
+  }
+}

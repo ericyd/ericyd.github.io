@@ -1,0 +1,21 @@
+//
+// Resume
+//
+
+.job-title {
+  font-weight: 700;
+  padding: 0 3em 0 0;
+  @media only screen and (max-width: 768px) {
+    display: block;
+    padding: 0;
+  }
+}
+
+ul {
+  margin-left: 1.25em;
+  margin-bottom: 1em;
+}
+
+li {
+  padding-bottom: 0.25em;
+}

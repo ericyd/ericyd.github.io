@@ -1,0 +1,50 @@
+//
+// Layout
+// - grid element styles and some responsive styles
+//
+.header,
+.main {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  @include for-tablet-landscape-up {
+    float: left;
+  }
+}
+
+.header {
+  border-bottom: 1px solid $border-color;
+  @include for-tablet-landscape-up {
+    width: 30%;
+    border-bottom: 0;
+  }
+
+  @include for-print {
+    border: 0;
+  }
+}
+.main {
+  border-left: 1px solid $border-color;
+  padding-bottom: 2em;
+  @include for-tablet-landscape-up {
+    width: 65%;
+  }
+
+  @include for-print {
+    border: 0;
+  }
+}
+
+.only-phone {
+  display: initial;
+  @include for-tablet-landscape-up {
+    display: none;
+  }
+}
+
+.no-phone {
+  display: none;
+  @include for-tablet-landscape-up {
+    display: initial;
+  }
+}

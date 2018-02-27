@@ -1,0 +1,25 @@
+{
+  "name": "ericyd.com",
+  "version": "1.0.0",
+  "description": "personal website for Eric Dauenhauer",
+  "main": "npm run serve",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^1.5.3"
+  },
+  "scripts": {
+    "serve": "jekyll serve",
+    "build": "jekyll build",
+    "prettier": "prettier --write --single-quote -- \"{,!(node_modules),!(_site)/**/}*.{js,css}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericyd/ericyd.com.git"
+  },
+  "keywords": [
+    "Eric"
+  ],
+  "author": "Eric Dauenhauer",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/ericyd/ericyd.com#readme"
+}

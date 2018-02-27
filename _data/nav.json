@@ -1,0 +1,44 @@
+[
+  {
+    "href": "/",
+    "internal": true,
+    "target": "index",
+    "id": "home",
+    "caption": "Home"
+  },
+  {
+    "href": "/experience/",
+    "internal": true,
+    "target": "experience",
+    "id": "experience",
+    "caption": "Experience"
+  },
+  {
+    "href": "http://github.com/ericyd",
+    "internal": false,
+    "target": "",
+    "id": "github",
+    "caption": "Github"
+  },
+  {
+    "href": "http://bitbucket.com/ericyd",
+    "internal": false,
+    "target": "",
+    "id": "bitbucket",
+    "caption": "Bitbucket"
+  },
+  {
+    "href": "http://www.soundcloud.com/ericyd",
+    "internal": false,
+    "target": "",
+    "id": "soundcloud",
+    "caption": "Soundcloud"
+  },
+  {
+    "href": "/geology/",
+    "internal": true,
+    "target": "geology",
+    "id": "geology",
+    "caption": "Geology"
+  }
+]

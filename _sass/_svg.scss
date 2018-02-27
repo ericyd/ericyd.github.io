@@ -1,0 +1,18 @@
+//
+// SVG
+// - for use with SVG or elements with inline svg as children
+//
+
+.svg-primary {
+  svg {
+    fill: $primary;
+    stroke: $primary;
+    width: 1em;
+    height: 1em;
+  }
+
+  &:hover svg {
+    fill: $secondary;
+    stroke: $secondary;
+  }
+}

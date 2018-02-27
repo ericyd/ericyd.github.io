@@ -1,0 +1,13 @@
+.for-print-only {
+  display: none;
+
+  @include for-print {
+    display: block;
+  }
+}
+
+.no-print {
+  @include for-print {
+    display: none;
+  }
+}
