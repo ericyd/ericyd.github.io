@@ -10,11 +10,8 @@ Documenting in case I ever need to do this again.
 Name            | Type  | TTL | Data
 ----------------|-------|-----|------------
 @               |A      | 1h  | 192.30.252.153
-----------------|-------|-----|------------
                 |       |     | 192.30.252.154
-----------------|-------|-----|------------
 eric@ericyd.com |MX     | 1m  | 10 mx.zoho.com.
-----------------|-------|-----|------------
                 |       |     | 20 mx2.zoho.com.
 
 5. Follow [Zoho documentation](https://www.zoho.com/mail/help/email-hosting-with-zoho.html) to set up the mail correctly
