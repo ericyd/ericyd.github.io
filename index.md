@@ -12,9 +12,9 @@ title: Home
 
 This website exists, I can be sure,
 
-because you requested it.
+because you requested its
 
-And now some server responded with
+contents, and a server responded with
 
 this unique sequence of bits.
 
@@ -34,11 +34,11 @@ It also may be possible
 
 this site is here because
 
-[Lifehacker tricked me](https://lifehacker.com/5958893/why-its-worth-it-to-purchase-your-own-domain-name) to believe
+[Lifehacker tricked me](https://lifehacker.com/5958893/why-its-worth-it-to-purchase-your-own-domain-name) into believing
 
 owning a domain was all the buzz.
 
-<br />
+<!-- <br />
 
 Yet the real answer may not be
 
@@ -46,17 +46,17 @@ quite so clean and facile.
 
 There was a time I wanted a site
 
-~to practice web development.~
+~to practice web development.~ -->
 
 <br />
 
 My first rendition of this site
 
-was hosted somewhere else;
+was hosted by someone in flannel.
 
 Their service was superb and I got
 
-~to play with servers and such~
+to play with my own cPanel!
 
 <br />
 
@@ -86,9 +86,14 @@ what once was hosted here
 
 has been moved to a wide range of profiles
 
-in the inter-blog-web-sphere.
+in the [inter]-[blog]-[web]-[sphere].
 
-<br />
+[inter]: https://github.com/ericyd
+[blog]: https://bitbucket.org/ericyd/
+[web]: https://soundcloud.com/ericyd
+[sphere]: https://www.linkedin.com/in/ericdauenhauer/
+
+<!-- <br />
 
 As I make this shift to static site
 
@@ -96,7 +101,7 @@ As I make this shift to static site
 
 It makes me contemplate why at all
 
-~I keep the site online~
+~I keep the site online~ -->
 
 <br />
 
@@ -120,33 +125,13 @@ for some songs I like to blast.
 
 <br />
 
-Yet another factor I do
+I sometimes feel guilty for hosting
 
-not consider lightly,
+a site that is just a collection of links,
 
-is the growing server footprint
+but then I check out Reddit
 
-~of throwaway sites like mine!~
-
-<br />
-
-Though I may not be the worst offender,
-
-it is impossible to deny,
-
-the impact of putting everything
-
-~"in the cloud" and out of sight~
-
-<br />
-
-For now at least, it seems to be
-
-a cost I can live with
-
-demonstrated by the fact
-
-~you're reading this very poem!~
+and realize "yep, most of the internet stinks."
 
 <br />
 
@@ -156,7 +141,7 @@ than when you started reading,
 
 I hope this poem offered something
 
-~to break up the day's monotony~
+to break up the day's proceedings.
 
 <br />
 
@@ -166,7 +151,7 @@ with any sincerity,
 
 but the truth is (yep, you already guessed)
 
-~the content will be the same~
+updates here are a rarity.
 
 <br />
 
