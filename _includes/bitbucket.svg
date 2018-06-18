@@ -1,0 +1,9 @@
+<!-- https://bitbucket.org/ -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 60 60" width="24" height="24" overflow="visible">
+    <title>Bitbucket logo</title>
+    <g transform="translate(0, -40)">
+    <path d="M2,41.25a2,2,0,0,0-2,2.32L8.49,95.11a2.72,2.72,0,0,0,2.66,2.27H51.88a2,2,0,0,0,2-1.68l8.51-52.11a2,2,0,0,0-2-2.32ZM37.75,78.5h-13L21.23,60.12H40.9Z"></path>
+    <path d="M59.67,60.12H40.9L37.75,78.5h-13L9.4,96.73a2.71,2.71,0,0,0,1.75.66H51.89a2,2,0,0,0,2-1.68Z"></path>
+    </g>
+</svg>

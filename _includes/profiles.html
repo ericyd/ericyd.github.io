@@ -1,0 +1,5 @@
+{% for profile in site.data.profiles %}
+<a href="{{profile.href}}" class="profile-icon" title="{{profile.caption}}">
+    {% include {{profile.id}}.svg %}
+</a>
+{% endfor %}

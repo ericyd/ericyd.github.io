@@ -18,13 +18,15 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <header class='header'>
-      {% include header.html %}
-      {% include nav.html %}
-    </header>
+    {% include header.html %}
 
     <main class='main' id="main">
-      {{content}}
+      {% for section in page.sections %}
+        <section class="section" id="{{section}}">
+          <h1>{{section | capitalize}}</h1>
+          {% include {{section}}.html %}
+        </section>
+      {% endfor %}
     </main>
 
     {% include footer.html %}
