@@ -40,15 +40,20 @@ $gray-light: #999;
 }
 
 // these should be imported first so other partials can access them without directly importing
-@import 'breakpoints';
-@import 'keyframes';
-// these partials contain actual styles used in the site
-@import 'headers';
-@import 'body';
+// @import 'breakpoints';
+// @import 'keyframes';
+// // these partials contain actual styles used in the site
+// @import 'headers';
+// @import 'body';
+// @import 'layout';
+// @import 'links';
+// @import 'nav';
+// @import 'print';
+// @import 'resume';
+// @import 'svg';
+// @import 'accessibility';
+
+@import 'global';
+@import 'header';
 @import 'layout';
-@import 'links';
-@import 'nav';
-@import 'print';
-@import 'resume';
-@import 'svg';
-@import 'accessibility';
+@import 'footer';

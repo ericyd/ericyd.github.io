@@ -1,0 +1,36 @@
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    //  font-size: 40px;
+}
+
+
+a {
+    cursor: pointer;
+    color: rgb(200,200,200);
+    // text-decoration: none;
+    
+    &:hover {
+        color: rgb(150,150,150);
+    }
+
+    &:active,
+    &:link,
+    &:visited {
+        color: rgb(200,200,200);
+    }
+}

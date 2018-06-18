@@ -1,6 +1,30 @@
-<div class="row" id="footer">
-    <div class="copyright">
+<footer class="section dark-gray" id="footer">
+    <div class="footer-section">
+        <h4 class="footer-section__header">Fair use</h4>
         Unless otherwise specified, all content on this site is licensed under the 
         <a href="https://opensource.org/licenses/GPL-3.0">GPL-3</a> license.
     </div>
-</div>
+
+    <div class="footer-section">
+        <h4 class="footer-section__header">Contents</h4>
+        <ul>
+            {% for link in site.data.sections %}
+            <li><a href="{{ link.href }}">{{ link.caption }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h4 class="footer-section__header">Profiles</h4>
+        <ul>
+            {% for link in site.data.profiles %}
+            <li><a href="{{ link.href }}">{{ link.caption }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h4 class="footer-section__header">Tag line</h4>
+        {{ site.description }}
+    </div>
+</footer>
