@@ -85,40 +85,6 @@ if (!Array.from) {
 
 // Actual code
 // =====================
-var contactLink = document.getElementById('contactlink');
-var contactEric = document.getElementById('contacteric');
-var emailSelect = document.getElementById('email-select');
-
-function showEmail() {
-  contactLink.style.display = 'none';
-  document.getElementById('email-holder').innerText = 'eric@ericyd.com';
-  contactEric.style.display = 'block';
-  contactEric.classList.add('active');
-  SelectText('email-holder');
-}
-
-function SelectText(id) {
-    var text = document.getElementById(id);
-    var range, selection;
-    if (document.body.createTextRange) {
-        range = document.body.createTextRange();
-        range.moveToElementText(text);
-        range.select();
-    } else if (window.getSelection) {
-        selection = window.getSelection();        
-        range = document.createRange();
-        range.selectNodeContents(text);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    }
-}
-
-contactLink.addEventListener('click', showEmail);
-contactLink.addEventListener('keydown', showEmail);
-emailSelect.addEventListener('click', function(e) {
-  SelectText('email-holder');
-})
-
 function toggleMenu() {
   var sidebar = document.querySelector('nav');
   if (sidebar.classList.contains('collapsed')) {
@@ -140,3 +106,16 @@ function toggleMenu() {
 Array.from(document.querySelectorAll('.toggle-menu')).forEach(function(element) {
   element.addEventListener('click', toggleMenu);
 });
+
+function showEmail() {
+  document.getElementById('liame').innerText = ['f','s','j','d','A','f','s','j','d','z','e','/','d','p','n']
+    .map(function(letter) {
+      console.log(letter);
+      return String.fromCharCode(letter.charCodeAt(0) - 1);
+    })
+    .join('')
+}
+
+(function onReady() {
+  showEmail();
+})()
