@@ -34,3 +34,16 @@ a {
         color: rgb(200,200,200);
     }
 }
+
+.keyboard-only {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: transparent !important;
+  background-color: transparent;
+
+  &:focus {
+    color: #000  !important;
+    // background-color: #000;
+  }
+}

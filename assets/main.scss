@@ -53,6 +53,14 @@ $gray-light: #999;
 // @import 'svg';
 // @import 'accessibility';
 
+
+$height-mask: 150px;
+$height-clip: 250px;
+
+$header-height: 60px;
+
+$color-base: rgb(50,150,250);
+
 @import 'global';
 @import 'header';
 @import 'layout';

@@ -1,73 +1,85 @@
-$height-mask: 150px;
-$height-clip: 250px;
+$text-position: $header-height - 65px;
 
-// To regulate alpha is recommended to use gray scale.
-// Recomiendo utilizar escala de grises
-
-$darken: 20%;
-
-$color: rgb(255,255,255);
-$color-alpha: darken( $color, $darken );
-
-// Apply color here!
-// Todo el color que quieras!
-$color-base: rgb(50,150,250);
-
-
-.text{
-  position: fixed;
+.header__logo {
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: $height-clip;
-  z-index: 10;
-}
-svg{
-  width: 100%;
-  height: inherit;
-  text{
-    // svg center text.
-    // centar text svg.
-    text-anchor: middle;
+  width: 280px;
+  height: 280px;
+  display: block;
+  font-size: 80px;
+  font-family: 'Encode Sans Condensed', sans-serif;
+
+  * {
+    position: absolute;
+    top: $text-position;
+    left: 10px;
+    font-family: 'Encode Sans Condensed', sans-serif;
   }
-  #alpha{
-    fill: $color-alpha;
-    //animation: alpha 10s ease infinite;
+  .logo-white-text {
+    color: #fff;
+    clip-path: inset(0px 0px 35px 0px);
   }
-  #alpha2{
-    fill: $color-alpha;
-    //animation: alpha 10s ease infinite;
-  }
-  .title{
-    letter-spacing: -2px;
-    font-size: 6em;
-    font-weight: 800;
-  }
-  #subtitle{
-    letter-spacing: 8px;
-    font-size: 1.2em;
-    font-weight: 300;
-    text-transform: uppercase;
-  }
-  #cutout{
-    height: $height-mask;
-    fill: $color-base;
-    // add the mask.
-    // aplicar máscara.
-    mask: url(#mask);
-  }
-  #fillin {
-    mask: url(#mask2);
-    fill: $color-base;
-    clip-path: url(#clip1);
+  
+  .logo-blue-text {
+    color: $color-base;
   }
 }
 
-section.intro{
-  background: url(http://www.weatherwizkids.com/wp-content/uploads/2015/02/fractus-clouds.jpg) no-repeat top center;
-  // background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/mision.jpg) no-repeat top center;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  min-height: 100%;
+.navigation {
+  list-style: none;
+  margin: 0; 
+  
+  background: $color-base;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: stretch;
+
+  height: $header-height;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1em;
+  height: 100%;
+  color: white;
+}
+
+.navigation a:hover {
+  background: darken($color-base, 2%);
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255,255,255,0.3); 
+    border-bottom: 1px solid rgba(0,0,0,0.1); 
+  }
+
+  
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
 }
