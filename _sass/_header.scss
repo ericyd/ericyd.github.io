@@ -10,18 +10,18 @@ $text-position: $header-height - 65px;
   font-size: 80px;
   font-family: 'Encode Sans Condensed', sans-serif;
 
-  * {
+  .header__text {
     position: absolute;
     top: $text-position;
     left: 10px;
     font-family: 'Encode Sans Condensed', sans-serif;
   }
-  .logo-white-text {
+  .header__text--white {
     color: #fff;
     clip-path: inset(0px 0px 35px 0px);
   }
   
-  .logo-blue-text {
+  .header__text--blue {
     color: $color-base;
   }
 }
@@ -45,17 +45,18 @@ $text-position: $header-height - 65px;
   height: $header-height;
 }
 
-.navigation a {
+.navigation__link {
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1em;
   height: 100%;
-  color: white;
+  color: white !important;
+  transition: all 0.3s;
 }
 
-.navigation a:hover {
-  background: darken($color-base, 2%);
+.navigation__link:hover {
+  background: darken($color-base, 10%);
 }
 
 @media all and (max-width: 800px) {
@@ -71,7 +72,7 @@ $text-position: $header-height - 65px;
     padding: 0;
   }
   
-  .navigation a { 
+  .navigation__link { 
     text-align: center; 
     padding: 10px;
     border-top: 1px solid rgba(255,255,255,0.3); 
@@ -79,7 +80,7 @@ $text-position: $header-height - 65px;
   }
 
   
-  .navigation li:last-of-type a {
+  .navigation li:last-of-type .navigation__link {
     border-bottom: none;
   }
 }

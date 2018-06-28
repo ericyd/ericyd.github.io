@@ -1,11 +1,11 @@
 <header class='header'>
   <div class="header__logo">
-    <span class="logo-blue-text">eric y.d.</span>
-    <span class="logo-white-text">eric y.d.</span>
+    <span class="header__text header__text--blue">eric y.d.</span>
+    <span class="header__text header__text--white">eric y.d.</span>
   </div>
   <ul class="navigation">
     {% for link in site.data.sections %}
-    <li><a href="{{ link.href }}">{{ link.caption }}</a></li>
+    <li><a href="{{ link.href }}" class="navigation__link">{{ link.caption }}</a></li>
     {% endfor %}
   </ul>
 
