@@ -7,7 +7,7 @@
 
     <div class="footer-section">
         <h4 class="footer-section__header">Contents</h4>
-        <ul>
+        <ul class="footer-section__list">
             {% for link in site.data.sections %}
             <li><a href="{{ link.href }}">{{ link.caption }}</a></li>
             {% endfor %}
@@ -16,7 +16,7 @@
 
     <div class="footer-section">
         <h4 class="footer-section__header">Profiles</h4>
-        <ul>
+        <ul class="footer-section__list">
             {% for link in site.data.profiles %}
             <li><a href="{{ link.href }}">{{ link.caption }}</a></li>
             {% endfor %}
