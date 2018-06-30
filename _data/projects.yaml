@@ -8,13 +8,13 @@
   description: a thing I made to keep track of my money
   link_text: Check out the GitHub project
   link_href: https://github.com/ericyd/ledger
-- id: ledger
-  title: Ledger
+- id: pa11yReporter
+  title: pa11y reporter
   description: a thing I made to keep track of my money
   link_text: Check out the GitHub project
-  link_href: https://github.com/ericyd/ledger
-- id: ledger
-  title: Ledger
+  link_href: https://github.com/ericyd/pa11y-reporter
+- id: lineDraw
+  title: Line Art
   description: a thing I made to keep track of my money
-  link_text: Check out the GitHub project
-  link_href: https://github.com/ericyd/ledger
+  link_text: Start drawing!
+  link_href: https://codepen.io/ericyd/full/ELEzOR

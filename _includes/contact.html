@@ -25,10 +25,10 @@ enable this if spam seems to increase with email being public
   </div>
   <p>
     I would be particularly interested in hearing from you if you meet any of the below criteria:
-    <ul>
-      <li>You live in the Portland, OR area and want to make some music</li>
-      <li>You are a Nigerian Prince and would like to share your wealth</li>
-      <li>You have a killer bread recipe you need to share ASAP</li>
+    <ul class="contact__reason-list">
+    {% for reason in site.data.contact.reasons %}
+      <li class="contact_reason">{{ reason }}</li>
+    {% endfor %}
     </ul>
   </p>
 </section>
