@@ -3,8 +3,7 @@ $icon-scale-factor: 0.5;
 $text-scale-factor: 2;
 
 .profiles {
-  padding: 0;
-  margin: 0;
+  @include section();
   display: flex;
   flex-flow: row wrap;
   background-color: $base-color;

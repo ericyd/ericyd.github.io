@@ -39,6 +39,12 @@ $gray-light: #999;
   transition: all 0.3s ease;
 }
 
+@mixin section {
+  padding: 8em 1em;
+  margin: 0;
+  border: 0;
+}
+
 // these should be imported first so other partials can access them without directly importing
 // @import 'breakpoints';
 // @import 'keyframes';
@@ -66,3 +72,6 @@ $color-base: rgb(50,150,250);
 @import 'layout';
 @import 'footer';
 @import 'profiles';
+@import 'projects';
+@import 'contact';
+@import 'intro';

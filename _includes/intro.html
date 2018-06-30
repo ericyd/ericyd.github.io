@@ -1,1 +1,19 @@
-intro content
+<section class="intro">
+  <div class="intro__hero">Hello, I'm Eric</div>
+  <svg>
+    <defs>
+      <clipPath id="intro__selfieClip" width="10em">
+        <!-- <circle id="img--selfie__circle" /> -->
+        <circle r="4em" cx="6.25em" cy="4em"/>
+      </clipPath>
+    </defs>
+  </svg>
+  <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="intro__selfie" />
+  <!-- <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="img--selfie2" /> -->
+  <div class="intro__caption">
+    {{ site.description }}
+  </div>
+  <div class="intro__more-arrow">
+    {% include chevron.svg %}
+  </div>
+</section>

@@ -1,0 +1,12 @@
+.project {
+  @include section();
+  background-color: $color-base;
+}
+
+.project:nth-of-type(3n) {
+  background-color: darken($color-base, 20%);
+}
+
+.project:nth-of-type(2n) {
+  background-color: darken($color-base, 40%);
+}

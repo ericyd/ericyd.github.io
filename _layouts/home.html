@@ -24,7 +24,7 @@
     <main class='main' id="main">
       {% for section in page.sections %}
         <section class="section" id="{{section}}">
-          <h1>{{section | capitalize}}</h1>
+          <!-- <h1>{{section | capitalize}}</h1> -->
           {% include {{section}}.html %}
         </section>
       {% endfor %}

@@ -1,11 +1,5 @@
 <footer class="section dark-gray" id="footer">
     <div class="footer-section">
-        <h4 class="footer-section__header">Fair use</h4>
-        Unless otherwise specified, all content on this site is licensed under the 
-        <a href="https://opensource.org/licenses/GPL-3.0" class="footer__link">GPL-3</a> license.
-    </div>
-
-    <div class="footer-section">
         <h4 class="footer-section__header">Contents</h4>
         <ul class="footer-section__list">
             {% for link in site.data.sections %}
@@ -26,5 +20,11 @@
     <div class="footer-section">
         <h4 class="footer-section__header">Accessibility</h4>
         {{ site.accessibility_statement }}
+    </div>
+
+    <div class="footer-section">
+        <h4 class="footer-section__header">Fair use</h4>
+        Unless otherwise specified, all content on this site is licensed under the 
+        <a href="https://opensource.org/licenses/GPL-3.0" class="footer__link">GPL-3</a> license
     </div>
 </footer>

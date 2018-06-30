@@ -1,0 +1,41 @@
+.intro {
+  @include section();
+  padding: 1em;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  * {
+    text-align: center;
+  }
+}
+
+.intro__selfie {
+  // width: 5em;
+  height: 10em;
+  // background: url('/assets/eric_dauenhauer.jpg') 50px 0px no-repeat;
+  // clip-path: circle(40%);
+  clip-path: url(#intro__selfieClip);
+  margin: -5em auto 0 auto;
+}
+
+.intro__caption {
+  display: flex;
+  max-width: 320px;
+}
+
+.intro__hero {
+  font-size: 5em;
+}
+
+.intro__more-arrow {
+  margin-top: 3em;
+  transform: rotate(90deg);
+
+  svg {
+    width: 5em;
+    height: 5em;
+  }
+}
