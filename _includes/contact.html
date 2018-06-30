@@ -20,14 +20,14 @@ enable this if spam seems to increase with email being public
     Necessary emails only, please:
   </p>
   <!-- TODO: add gmail and other webmail links -->
-  <div id="liame">
-    <span class="sr-only">My email is: </span>eric@ericyd.com
+  <div id="liame" class="contact__email">
+    <span class="sr-only">My email is: </span>{{ site.email }}
   </div>
   <p>
     I would be particularly interested in hearing from you if you meet any of the below criteria:
     <ul class="contact__reason-list">
     {% for reason in site.data.contact.reasons %}
-      <li class="contact_reason">{{ reason }}</li>
+      <li class="contact__reason">{{ reason }}</li>
     {% endfor %}
     </ul>
   </p>

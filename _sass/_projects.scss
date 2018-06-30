@@ -1,12 +1,51 @@
+$project-color-1: #A3D3E3;
+$project-color-2: #E3B3A3;
+$project-color-3: #D3A3E3;
+
+@mixin projectN($color) {
+  background-color: $color;
+
+  .project__link {
+    border: 1px solid darken($color, 20%);
+    color: darken($color, 50%);
+    @include default-transition();
+
+    &:hover,
+    &:focus {
+      background-color: darken($color, 20%);
+      border: 1px solid darken($color, 30%);
+      color: darken($color, 60%);
+    }
+  }
+}
+
 .project {
   @include section();
   background-color: $color-base;
 }
 
-.project:nth-of-type(3n) {
-  background-color: darken($color-base, 20%);
+.project__link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
 }
 
-.project:nth-of-type(2n) {
-  background-color: darken($color-base, 40%);
+.project:nth-of-type(3n - 1) {
+  @include projectN($project-color-1);
+}
+
+.project:nth-of-type(3n) {
+  @include projectN($project-color-2);
+}
+
+.project:nth-of-type(3n+1) {
+  @include projectN($project-color-3);
+}
+
+.project__title {
+
+}
+
+.project__description {
+  margin: 2em 0;
 }

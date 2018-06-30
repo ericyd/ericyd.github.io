@@ -1,0 +1,47 @@
+
+
+//== Navbar
+$height-mask: 150px;
+$height-clip: 250px;
+$header-height: 60px;
+$sidebar-width: 320px;
+$body-height: 100vh;
+
+//== Colors
+$color-base: rgb(50,150,250);
+$primary: #8F5796;
+$secondary: darken($primary, 25%); //#5a6373;
+// $border-color: darken($body-bg, 20%);
+
+//== Typography
+// $source-sans-pro: 'Source Sans Pro';
+// $fira-sans: 'Fira Sans';
+// $fira-sans-condensed: 'Fira Sans Condensed';
+// $font-family-backups: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// $font-family-body: $source-sans-pro, $font-family-backups;
+// $font-family-header: $fira-sans, $font-family-backups;
+$font-family-default: 'Open Sans', sans-serif;
+$font-size-base: 22px;
+
+$line-height-base: 1.65;
+
+
+@mixin default-transition($prop: all, $time: 0.3s, $timingFunc: ease) {
+  -webkit-transition: $prop $time $timingFunc;
+  -moz-transition: $prop $time $timingFunc;
+  transition: $prop $time $timingFunc;
+}
+
+@mixin section {
+  padding: 1.5em 1em;
+  margin: 0;
+  border: 0;
+
+  @include for-tablet-portrait-up {
+    padding: 3em 2em;
+  }
+
+  @include for-tablet-landscape-up {
+    padding: 6em 4em;
+  }
+}

@@ -2,51 +2,9 @@
 # This comment is required for Jekyll to compile the file from scss to css
 ---
 
-// Custom Variables
 
-// remove "default" from the variables
-
-//== Scaffolding
-$body-bg: #fdfdfd;
-$grid-gutter-width: 0px;
-
-//== Colors
-$primary: #8F5796;
-$secondary: darken($primary, 25%); //#5a6373;
-$border-color: darken($body-bg, 20%);
-
-//== Typography
-$source-sans-pro: 'Source Sans Pro';
-$fira-sans: 'Fira Sans';
-$fira-sans-condensed: 'Fira Sans Condensed';
-$font-family-backups: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-body: $source-sans-pro, $font-family-backups;
-$font-family-header: $fira-sans, $font-family-backups;
-$font-size-base: 20px;
-
-$line-height-base: 1.65;
-
-//== Navbar
-$sidebar-width: 320px;
-$body-height: 100vh;
-
-$gray-dark: #444;
-$gray-light: #999;
-
-@mixin default-transition {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-@mixin section {
-  padding: 8em 4em;
-  margin: 0;
-  border: 0;
-}
 
 // these should be imported first so other partials can access them without directly importing
-// @import 'breakpoints';
 // @import 'keyframes';
 // // these partials contain actual styles used in the site
 // @import 'headers';
@@ -60,13 +18,9 @@ $gray-light: #999;
 // @import 'accessibility';
 
 
-$height-mask: 150px;
-$height-clip: 250px;
 
-$header-height: 60px;
-
-$color-base: rgb(50,150,250);
-
+@import 'variables_and_mixins';
+@import 'breakpoints';
 @import 'global';
 @import 'header';
 @import 'layout';

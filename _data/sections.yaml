@@ -1,12 +1,15 @@
 - href: "#intro"
   id: "intro"
   caption: "Intro"
+
 - href: "#profiles"
   id: "profiles"
   caption: "Profiles"
+
 - href: "#projects"
   id: "projects"
   caption: "Projects"
+
 - href: "#contact"
   id: "contact"
   caption: "Contact"
