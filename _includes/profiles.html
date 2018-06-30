@@ -1,5 +1,13 @@
-{% for profile in site.data.profiles %}
-<a href="{{profile.href}}" class="profile-icon" title="{{profile.caption}}">
-    {% include {{profile.id}}.svg %}
-</a>
-{% endfor %}
+
+
+
+<div class="profiles">
+  {% for profile in site.data.profiles %}
+  <div class="button--container">
+    <a href="{{profile.href}}" class="button" title="{{profile.caption}}">
+      <!-- profile-icon -->
+        {% include {{profile.id}}.svg %}
+    </a>
+  </div>
+  {% endfor %}
+</div>

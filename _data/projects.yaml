@@ -1,0 +1,10 @@
+- id: gdrive-copy
+  title: Copy Folder for Google Drive
+  description: a thing I made to copy Google Drive folders
+  link_text: Check out the GitHub project
+  link_href: https://github.com/ericyd/gdrive-copy
+- id: ledger
+  title: Ledger
+  description: a thing I made to keep track of my money
+  link_text: Check out the GitHub project
+  link_href: https://github.com/ericyd/ledger

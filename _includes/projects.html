@@ -1,3 +1,12 @@
+{% for project in site.data.projects %}
+<section class="project">
+  <h2>{{ project.title }}</h2>
+  <p>{{ project.description }}</p>
+  <a href="{{ project.link_href }}" class="btn--project">{{ project.link_text }}</a>
+</section>
+{% endfor %}
+
+<!-- 
 <h3>GED tutoring</h3>
 <p>
 Since October 2015, I have been volunteering as a tutor at the Londer Learning Center (LLC), a GED program administered by Multnomah County for adult learners who are transitioning out of incarceration. I have had the opportunity to tutor in all four of the GED subjects, but I primarily focus on math. I enjoy tutoring math because it is a subject that causes substantial anxiety for a lot of students, and it is wonderful to see a student go from afraid to confident in a subject so important.
@@ -25,4 +34,4 @@ My first foray into an "app" was a utility for Google Drive to copy a folder (su
 </p>
 <p>
 More recently, I built my first true "full stack" application, which is a simple ledger (basically just a CRUD application to track finances).  I used Express as the backend coupled with MongoDB, and decided to use the new [Svelte](https://svelte.technology/) framework for the front end. It is hosted for free [through Heroku](http://peledger.herokuapp.com/) and the source code is also available [on Github](https://github.com/ericyd/ledger).
-</p>
+</p> -->

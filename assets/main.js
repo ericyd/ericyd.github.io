@@ -107,14 +107,7 @@ Array.from(document.querySelectorAll('.toggle-menu')).forEach(function(element) 
   element.addEventListener('click', toggleMenu);
 });
 
-function showEmail() {
-  document.getElementById('liame').innerText = ['f','s','j','d','A','f','s','j','d','z','e','/','d','p','n']
-    .map(function(letter) {
-      console.log(letter);
-      return String.fromCharCode(letter.charCodeAt(0) - 1);
-    })
-    .join('')
-}
+
 
 (function onReady() {
   showEmail();
