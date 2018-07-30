@@ -5,7 +5,13 @@
   </div>
   <ul class="navigation">
     {% for link in site.data.sections %}
-    <li><a href="{{ link.href }}" class="navigation__link">{{ link.caption }}</a></li>
+    <!-- must use link[1] because we're iterating over a hash table
+    https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates -->
+    <li>
+      <a href="{{ link[1].href }}"
+      data-scroll-to="{{ link[1].href }}"
+      class="navigation__link">{{ link[1].caption }}</a>
+    </li>
     {% endfor %}
   </ul>
 

@@ -1,19 +1,24 @@
 - href: "https://github.com/ericyd"
   id: "github"
   caption: "Github"
-
-# - href: "https://bitbucket.com/ericyd"
-#   id: "bitbucket"
-#   caption: "Bitbucket"
+  primary: true
 
 - href: "https://www.linkedin.com/in/ericdauenhauer"
   id: "linkedin"
   caption: "LinkedIn"
+  primary: true
+
+- href: "https://bitbucket.com/ericyd"
+  id: "bitbucket"
+  caption: "Bitbucket"
+  primary: false
 
 - href: "https://www.codepen.io/ericyd"
   id: "codepen"
   caption: "CodePen"
+  primary: false
 
 - href: "https://www.soundcloud.com/ericyd"
   id: "soundcloud"
   caption: "Soundcloud"
+  primary: false

@@ -1,12 +1,14 @@
 <div class="profiles">
-  <h2>Find my work online</h2>
-  <p>{{ site.content_summary }}</p>
+  <h2>{{ site.data.sections.profiles.title }}</h2>
+  <p>{{ site.data.sections.profiles.description }}</p>
   {% for profile in site.data.profiles %}
-  <div class="button--container">
-    <a href="{{profile.href}}" class="button" title="{{profile.caption}}">
-      <!-- profile-icon -->
+    {% if profile.primary %}
+    <div class="button--container">
+      <a href="{{profile.href}}" class="button" title="{{profile.caption}}">
+        <!-- profile-icon -->
         {% include icons/{{profile.id}}.svg %}
-    </a>
-  </div>
+      </a>
+    </div>
+    {% endif %}
   {% endfor %}
 </div>

@@ -1,5 +1,5 @@
 <section class="intro">
-  <div class="intro__hero">Hello, I'm Eric</div>
+  <div class="intro__hero">{{ site.data.sections.intro.title }}</div>
   <svg>
     <defs>
       <clipPath id="intro__selfieClip" width="10em">
@@ -11,7 +11,7 @@
   <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="intro__selfie" />
   <!-- <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="img--selfie2" /> -->
   <div class="intro__caption">
-    {{ site.description }}
+    {{ site.data.sections.intro.description }}
   </div>
   <div class="intro__more-arrow">
     {% include icons/chevron.svg %}
