@@ -4,6 +4,10 @@ $text-scale-factor: 2;
 
 .profiles {
   @include section();
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
   background-color: $base-color;

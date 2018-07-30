@@ -3,6 +3,10 @@
   @include for-tablet-portrait-up {
     padding: 1em;
   }
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: column wrap;
   align-content: center;
@@ -24,6 +28,10 @@
 }
 
 .intro__caption {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   max-width: 320px;
   font-size: 0.75em;

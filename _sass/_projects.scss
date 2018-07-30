@@ -21,6 +21,10 @@ $project-color-3: #D3A3E3;
 
 .projects {
   @include section();
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
   background-color: lighten($base-color, 10%);
