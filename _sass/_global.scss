@@ -18,6 +18,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: $font-family-default;
+
+    @media (max-width: 360px) {
+      font-size: $font-size-base * 0.75;
+    }
 }
 
 a {

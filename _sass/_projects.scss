@@ -21,16 +21,17 @@ $project-color-3: #D3A3E3;
 
 .projects {
   @include section();
+  background-color: lighten($base-color, 10%);
+  text-align: center;
+}
+
+.project-container {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
-  background-color: lighten($base-color, 10%);
-  justify-content: center;
-  align-items: stretch;
-  align-content: center;
 }
 
 .project {
