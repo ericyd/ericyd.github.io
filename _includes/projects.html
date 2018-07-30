@@ -1,13 +1,29 @@
-<h2>{{ site.data.sections.projects.title }}</h2>
-<p>{{ site.data.sections.projects.description }}</p>
+<section class="projects">
+  <h2>{{ site.data.sections.projects.title }}</h2>
+  <p>{{ site.data.sections.projects.description }}</p>
+  {% for project in site.data.projects %}
+  <div class="project">
+    <h3 class="project__title">{{ project.title }}</h3>
+    <p class="project__description">{{ project.description }}</p>
+    <strong>Key skills:</strong>
+    <ul>
+    {% for skill in project.key_skills %}
+      <li>{{ skill }}</li>
+    {% endfor %}
+    </ul>
+    <a href="{{ project.link_href }}" class="project__link">{{ project.link_text }}</a>
+  </div>
+  {% endfor %}
+</section>
 
-{% for project in site.data.projects %}
+
+<!-- {% for project in site.data.projects %}
 <section class="project">
   <h2 class="project__title">{{ project.title }}</h2>
   <p class="project__description">{{ project.description }}</p>
   <a href="{{ project.link_href }}" class="project__link">{{ project.link_text }}</a>
 </section>
-{% endfor %}
+{% endfor %} -->
 
 <!-- 
 <h3>GED tutoring</h3>

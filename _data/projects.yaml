@@ -7,6 +7,9 @@
     Google Drive API).
   link_text: Copy a folder!
   link_href: https://github.com/ericyd/gdrive-copy
+  key_skills:
+    - React
+    - Google Drive API (via Google Apps Script)
 
 - id: ledger
   title: Ledger
@@ -16,12 +19,20 @@
     Utilizes Svelte, MongoDB, and Express and is hosted at <a href="http://peledger.herokuapp.com">peledger.herokuapp.com</a>
   link_text: Track that cash!
   link_href: https://github.com/ericyd/ledger
+  key_skills:
+    - Express
+    - Svelte
+    - MongoDB
 
 - id: pa11yReporter
   title: pa11y reporter
   description: A reporter for pa11y, a wonderful tool to automate accessibility audits for websites
   link_text: Audit yourself!
   link_href: https://github.com/ericyd/pa11y-reporter
+  key_skills:
+    - NodeJS
+    - Pug
+    - CSS
 
 - id: lineDraw
   title: Line Art
@@ -31,3 +42,6 @@
     or adjusted by you! Play around a bit and see what you can make.
   link_text: Start drawing!
   link_href: https://codepen.io/ericyd/full/ELEzOR
+  key_skills:
+    - TypeScript
+    - SCSS
