@@ -13,15 +13,11 @@ body {
     text-rendering: optimizelegibility;
     margin: 0;
     padding: 0;
-    font-size: $font-size-base * 0.75;
+    font-size: $font-size-base;
     height: 100%;
     margin: 0;
     padding: 0;
     font-family: $font-family-default;
-
-    @include for-tablet-portrait-up {
-      font-size: $font-size-base;
-    }
 }
 
 a {

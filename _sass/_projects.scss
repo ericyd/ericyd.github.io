@@ -36,8 +36,11 @@ $project-color-3: #D3A3E3;
 .project {
   background-color: $color-base;
   flex: 0 1 auto;
-  width: 50%;
   padding: 1em;
+  width: 100%;
+  @include for-tablet-landscape-up {
+    width: 50%;
+  }
 }
 
 .project__link {
