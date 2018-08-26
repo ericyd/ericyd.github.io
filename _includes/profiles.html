@@ -1,0 +1,15 @@
+<div class="profiles">
+  <h2>{{ site.data.sections.profiles.title }}</h2>
+  <p>{{ site.data.sections.profiles.description }}</p>
+  {% for profile in site.data.profiles %}
+    {% if profile.primary %}
+    <div class="button--container">
+      <a href="{{profile.href}}" class="button" title="{{profile.caption}}">
+        <!-- profile-icon -->
+        {% include icons/{{profile.id}}.svg %}
+        <span class="sr-only">{{profile.caption}}</span>
+      </a>
+    </div>
+    {% endif %}
+  {% endfor %}
+</div>

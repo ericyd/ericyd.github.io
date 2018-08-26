@@ -1,0 +1,44 @@
+intro:
+  href: "#intro"
+  id: "intro"
+  caption: "Intro"
+  theme: "intro"
+  description: >
+    Just a human with a passion for all things JavaScript, 
+    web accessibility, and well-tested software.
+  title: "Hello, I'm Eric"
+
+profiles:
+  href: "#profiles"
+  id: "profiles"
+  caption: "Profiles"
+  theme: "profiles"
+  description: >
+    My work online is concentrated in just a few places.
+    If you'd like to get in touch, you can skip to the <a href="#contact">Contact section</a>.
+  title: Find my work online
+
+projects:
+  href: "#projects"
+  id: "projects"
+  caption: "Projects"
+  theme: "projects"
+  # description: >
+  #   This is a list of some things I have worked on. 
+  #   Checkout my <a href="https://www.github.com/ericyd">GitHub</a> for a full list of projects.
+  title: Some of my projects
+
+contact:
+  href: "#contact"
+  id: "contact"
+  caption: "Contact"
+  theme: "contact"
+  description: >
+    I provide my email address here with the confidence that it will not be abused. 
+    Necessary emails only, please
+  title: "Get in touch"
+  statement_of_interest: "I would be particularly interested in hearing from you if you meet any of the below criteria:"
+  contact_reasons:
+    - You live in the Portland, OR area and want to make some music
+    - You are a prince and would like to share your wealth
+    - You have a killer bread recipe you need to share ASAP

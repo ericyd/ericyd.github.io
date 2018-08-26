@@ -1,0 +1,82 @@
+@mixin projectN($color, $font-color) {
+  background-color: $color;
+  color: $font-color;
+
+  .project__link {
+    border: 1px solid darken($font-color, 30%);
+    color: $font-color;
+    @include default-transition();
+
+    &:hover,
+    &:focus {
+      background-color: darken($font-color, 20%);
+      border: 1px solid darken($font-color, 30%);
+      color: $color;
+    }
+  }
+
+  a,
+  a:visited,
+  a:active {
+    color: $font-color;
+  }
+
+  .project__title {
+    color: $font-color;
+  }
+}
+
+.projects {
+  @include section();
+  background-color: $brand-color-3;
+  text-align: center;
+}
+
+.project-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.project {
+  flex: 0 1 auto;
+  padding: 1em;
+  width: 100%;
+  @include for-tablet-landscape-up {
+    width: 50%;
+  }
+}
+
+.project__link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1em;
+}
+
+.project:nth-of-type(4n - 1) {
+  @include projectN($brand-color-1, $brand-color-1__font);
+}
+
+.project:nth-of-type(4n) {
+  @include projectN($brand-color-3, $brand-color-3__font);
+}
+
+.project:nth-of-type(4n+1) {
+  @include projectN($brand-color-4, $brand-color-4__font);
+}
+
+.project:nth-of-type(4n+2) {
+  @include projectN($brand-color-5, $brand-color-5__font);
+}
+
+
+.project__title {
+
+}
+
+.project__description {
+  margin: 2em 0;
+}

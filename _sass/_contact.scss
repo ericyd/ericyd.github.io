@@ -1,0 +1,21 @@
+.contact {
+  @include section();
+  background-color: $brand-color-1__font;
+
+  * {
+    color: $brand-color-1;
+  }
+}
+
+.contact__email {
+  text-align: center;
+  font-size: 2em;
+}
+
+.contact__reason-list {
+  margin-top: 1em;
+}
+
+.contact__reason {
+  margin: 0.5em 0;
+}

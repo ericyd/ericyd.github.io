@@ -1,18 +1,18 @@
-<div class="header-section">
-  <button class="toggle-menu">
-    <span class="visually-hidden">Open Menu </span>
-    {% include icon-menu.html %}
-  </button>
-</div>
-<div class="header-section">
-  <h1 class="header__title">
-    Eric
-    Y<span class="no-phone">ancey</span><span class="only-phone">.</span> 
-    D<span class="no-phone">auenhauer</span><span class="only-phone">.</span>
+<header class='header'>
+  <h1 class="header__logo">
+    <span class="header__text header__text--blue">eric y.d.</span>
+    <span class="header__text header__text--white">eric y.d.</span>
   </h1>
-  <div class="header__description">
-    <b>{{ site.headline }}</b>
-    <!-- Removed on 7/30/2017, not sure it adds much to the site
-      <span class="no-phone">{{ site.description }}</span> -->
-  </div>
-</div>
+  <ul class="navigation">
+    {% for link in site.data.sections %}
+    <!-- must use link[1] because we're iterating over a hash table
+    https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates -->
+    <li>
+      <a href="{{ link[1].href }}"
+      data-scroll-to="{{ link[1].href }}"
+      class="navigation__link">{{ link[1].caption }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+</header>

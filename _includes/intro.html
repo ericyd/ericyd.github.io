@@ -1,0 +1,19 @@
+<section class="intro">
+  <h2 class="intro__hero">{{ site.data.sections.intro.title }}</h2>
+  <svg>
+    <defs>
+      <clipPath id="intro__selfieClip" width="10em">
+        <!-- <circle id="img--selfie__circle" /> -->
+        <circle r="4em" cx="6.25em" cy="4em"/>
+      </clipPath>
+    </defs>
+  </svg>
+  <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="intro__selfie" alt="Eric's face"/>
+  <!-- <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="img--selfie2" /> -->
+  <div class="intro__caption">
+    {{ site.data.sections.intro.description }}
+  </div>
+  <div class="intro__more-arrow">
+    {% include icons/chevron.svg %}
+  </div>
+</section>
