@@ -1,4 +1,6 @@
-$text-position: $header-height - 65px;
+$text-position: $header-height - 75px;
+$text-clip: 25px;
+$margin-top: 0.25em;
 
 .header {
   background: $brand-color-1;
@@ -8,12 +10,15 @@ $text-position: $header-height - 65px;
   font-family: 'Encode Sans Condensed', sans-serif;
   font-size: 80px;
   display: block;
+  margin: 0;
+  padding: 0;
 
   @include for-tablet-landscape-up {
     position: absolute;
     top: 0;
     left: 0;
     width: 280px;
+    margin-top: $margin-top;
   }
 
 
@@ -30,7 +35,7 @@ $text-position: $header-height - 65px;
     @include for-tablet-landscape-up {
       display: block;
       color: $brand-color-1__font;
-      clip-path: inset(0px 0px 35px 0px);
+      clip-path: inset(0px 0px $text-clip 0px);
     }
   }
   

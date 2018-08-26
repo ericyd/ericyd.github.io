@@ -27,17 +27,17 @@ body {
 
 a {
   cursor: pointer;
-  color: rgb(50,50,50);
-  // text-decoration: none;
+  color: inherit;
   
-  &:hover {
-    color: rgb(150,150,150);
-  }
+  // &:hover {
+  //   color: inherit;
+  // }
 
+  &:hover,
   &:active,
   &:link,
   &:visited {
-    color: rgb(50,50,50);
+    color: inherit;
   }
 }
 

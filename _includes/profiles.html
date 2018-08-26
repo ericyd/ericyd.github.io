@@ -7,6 +7,7 @@
       <a href="{{profile.href}}" class="button" title="{{profile.caption}}">
         <!-- profile-icon -->
         {% include icons/{{profile.id}}.svg %}
+        <span class="sr-only">{{profile.caption}}</span>
       </a>
     </div>
     {% endif %}

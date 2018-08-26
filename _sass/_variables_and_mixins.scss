@@ -8,6 +8,8 @@ $sidebar-width: 320px;
 $body-height: 100vh;
 
 //== Colors
+
+// greens, yellow, dark brown/gray
 $brand-color-1: #30282f;
 $brand-color-1__font: #ddd;
 $brand-color-2: #70616c;
@@ -19,10 +21,17 @@ $brand-color-4__font: $brand-color-1;
 $brand-color-5: #289900;
 $brand-color-5__font: $brand-color-1;
 
-$color-base: rgb(50,150,250);
-$primary: #8F5796;
-$secondary: darken($primary, 25%); //#5a6373;
-// $border-color: darken($body-bg, 20%);
+// sunset
+$brand-color-1: #0a463c;
+$brand-color-1__font: #ddd;
+$brand-color-2: #259086;
+$brand-color-2__font: #000;
+$brand-color-3: #b6d2dd;
+$brand-color-3__font: #222;
+$brand-color-4: #fceec7;
+$brand-color-4__font: $brand-color-3__font;
+$brand-color-5: #e45149;
+$brand-color-5__font: #000;
 
 //== Typography
 // $source-sans-pro: 'Source Sans Pro';
