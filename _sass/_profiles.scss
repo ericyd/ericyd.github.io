@@ -10,9 +10,15 @@ $text-scale-factor: 2;
   display: -webkit-flex;
   display: flex;
   flex-flow: row wrap;
-  background-color: $base-color;
+  background-color: $brand-color-2;
   justify-content: center;
   align-items: center;
+
+  *,
+  *:active,
+  *:visited {
+    color: $brand-color-2__font;
+  }
 }
 
 .button--container {
@@ -41,6 +47,6 @@ $text-scale-factor: 2;
   }
 
   &:hover, &:focus {
-    border-color: darken($base-color, 50%);
+    border-color: $brand-color-2__font;
   }
 }

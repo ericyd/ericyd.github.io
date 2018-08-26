@@ -7,6 +7,8 @@
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
+  background-color: $brand-color-1;
+  color: $brand-color-1__font;
 }
 
 .footer-section {
@@ -16,6 +18,7 @@
 
   .footer-section__header {
     margin-bottom: 1em;
+    color: $brand-color-1__font;
   }
   .footer-section__list {
       padding: 0;
