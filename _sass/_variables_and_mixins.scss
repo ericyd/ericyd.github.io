@@ -8,6 +8,17 @@ $sidebar-width: 320px;
 $body-height: 100vh;
 
 //== Colors
+$brand-color-1: #30282f;
+$brand-color-1__font: #ddd;
+$brand-color-2: #70616c;
+$brand-color-2__font: #ddd;
+$brand-color-3: #dace8c;
+$brand-color-3__font: $brand-color-1;
+$brand-color-4: #7bd74a;
+$brand-color-4__font: $brand-color-1;
+$brand-color-5: #289900;
+$brand-color-5__font: $brand-color-1;
+
 $color-base: rgb(50,150,250);
 $primary: #8F5796;
 $secondary: darken($primary, 25%); //#5a6373;
@@ -21,6 +32,7 @@ $secondary: darken($primary, 25%); //#5a6373;
 // $font-family-body: $source-sans-pro, $font-family-backups;
 // $font-family-header: $fira-sans, $font-family-backups;
 $font-family-default: 'Open Sans', sans-serif;
+$font-family-title: 'Abril Fatface', cursive;
 $font-size-base: 22px;
 
 $line-height-base: 1.65;
@@ -42,6 +54,6 @@ $line-height-base: 1.65;
   }
 
   @include for-tablet-landscape-up {
-    padding: 6em 4em;
+    padding: 2em 4em;
   }
 }

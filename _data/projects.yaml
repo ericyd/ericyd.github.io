@@ -41,7 +41,7 @@
     Every shape starts with a circle and gets augmented based on parameters that can be generated,
     or adjusted by you! Play around a bit and see what you can make.
   link_text: Start drawing!
-  link_href: https://codepen.io/ericyd/full/ELEzOR
+  link_href: http://ericyd.com/line-art
   key_skills:
     - TypeScript
     - SCSS
