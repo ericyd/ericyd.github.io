@@ -44,6 +44,11 @@
   padding-top: 0;
   margin-top: 0;
   color: $brand-color-4__font;
+  margin-bottom: 2em;
+
+  @include for-tablet-portrait-up {
+    margin-bottom: 3em;
+  }
 }
 
 .intro__more-arrow {
