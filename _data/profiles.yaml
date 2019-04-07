@@ -22,3 +22,8 @@
   id: "soundcloud"
   caption: "Soundcloud"
   primary: false
+  
+- href: "https://observablehq.com/@ericyd"
+  id: "observable"
+  caption: "Observable"
+  primary: false
