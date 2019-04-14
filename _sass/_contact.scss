@@ -1,9 +1,11 @@
 .contact {
   @include section();
-  background-color: $brand-color-1__font;
+  // background-color: $brand-color-1__font;
+  background-color: $brand-color-1;
 
   * {
-    color: $brand-color-1;
+    // color: $brand-color-1;
+    color: $brand-color-1__font;
   }
 }
 

@@ -33,6 +33,36 @@ $brand-color-4__font: $brand-color-3__font;
 $brand-color-5: #e45149;
 $brand-color-5__font: #000;
 
+// http://colorbrewer2.org/#type=sequential&scheme=PuBu&n=5
+$brand-color-1: #f1eef6;
+$brand-color-1__font: #222;
+$brand-color-2: #bdc9e1;
+$brand-color-2__font: #222;
+$brand-color-3: #74a9cf;
+$brand-color-3__font: #222;
+$brand-color-4: #2b8cbe;
+$brand-color-4__font: #222;
+$brand-color-5: #045a8d;
+$brand-color-5__font: #222;
+
+// http://colorbrewer2.org/#type=sequential&scheme=PuBu&n=5 simplified
+$brand-color-1: #74a9cf;
+$brand-color-1__font: #222;
+$brand-color-2: lighten($brand-color-1, 10%);
+$brand-color-2__font: $brand-color-1__font;
+$brand-color-3: lighten($brand-color-1, 20%);
+$brand-color-3__font: $brand-color-1__font;
+$brand-color-4: darken($brand-color-1, 10%);
+$brand-color-4__font: $brand-color-1__font;
+$brand-color-5: darken($brand-color-1, 20%);
+$brand-color-5__font: $brand-color-1__font;
+
+$footer-background: $brand-color-1__font;
+$footer-font: $brand-color-1;
+
+$navbar-background: $footer-background;
+$navbar-font: $footer-font;
+
 //== Typography
 // $source-sans-pro: 'Source Sans Pro';
 // $fira-sans: 'Fira Sans';

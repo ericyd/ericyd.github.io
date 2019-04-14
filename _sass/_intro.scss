@@ -12,7 +12,9 @@
   align-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: $brand-color-4;
+  // background-color: $brand-color-4;
+  // credit: https://trianglify.io/
+  background: url('trianglify.svg') -150px -150px;
 
   * {
     text-align: center;

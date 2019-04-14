@@ -11,6 +11,10 @@ Documenting in case I ever need to do this again.
 | ----------------|-------|-----|------------
 | @               |A      | 1h  | 192.30.252.153
 |                 |       |     | 192.30.252.154
+|                 |       |     | 185.199.108.153
+|                 |       |     | 185.199.109.153
+|                 |       |     | 185.199.110.153
+|                 |       |     | 185.199.111.153
 | @               |MX     | 1h  | 10 mx.zoho.com.
 |                 |       |     | 20 mx2.zoho.com.
 | www             |CNAME  | 1h  | ericyd.com.
@@ -20,8 +24,24 @@ Documenting in case I ever need to do this again.
 7. If things aren't working, it might take up to 24 hours to update the DNS records.
 
 ```bash
-dig +noall +answer example.com
-;example.com.
-example.com.   73  IN  A 192.30.252.153
-example.com.   73  IN  A 192.30.252.154
+dig +noall +answer ericyd.com
+;ericyd.com.
+ericyd.com.   73  IN  A 192.30.252.153
+ericyd.com.   73  IN  A 192.30.252.154
+ericyd.com.   73  IN  A 185.199.108.153
+ericyd.com.   73  IN  A 185.199.109.153
+ericyd.com.   73  IN  A 185.199.110.153
+ericyd.com.   73  IN  A 185.199.111.153
+```
+
+You want the Github records to match the Google DNS records
+```bash
+dig +noall +answer ericyd.github.io
+;ericyd.com.
+ericyd.github.io.   73  IN  A 192.30.252.153
+ericyd.github.io.   73  IN  A 192.30.252.154
+ericyd.github.io.   73  IN  A 185.199.108.153
+ericyd.github.io.   73  IN  A 185.199.109.153
+ericyd.github.io.   73  IN  A 185.199.110.153
+ericyd.github.io.   73  IN  A 185.199.111.153
 ```

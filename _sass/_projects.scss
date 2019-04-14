@@ -1,5 +1,8 @@
-@mixin projectN($color, $font-color) {
-  background-color: $color;
+@mixin projectN($color, $font-color, $offsetX: 0, $offsetY: 0) {
+  // background-color: $color;
+  background: url('trianglify.svg');
+  background-position-x: -$offsetX;
+  background-position-y: -$offsetY;
   color: $font-color;
 
   .project__link {
@@ -57,24 +60,19 @@
 }
 
 .project:nth-of-type(4n - 1) {
-  @include projectN($brand-color-1, $brand-color-1__font);
+  @include projectN($brand-color-2, $brand-color-2__font, 500px, 500px);
 }
 
 .project:nth-of-type(4n) {
-  @include projectN($brand-color-3, $brand-color-3__font);
+  @include projectN($brand-color-3, $brand-color-3__font, 400px, 300px);
 }
 
 .project:nth-of-type(4n+1) {
-  @include projectN($brand-color-4, $brand-color-4__font);
+  @include projectN($brand-color-4, $brand-color-4__font, 250px, 250px);
 }
 
 .project:nth-of-type(4n+2) {
-  @include projectN($brand-color-5, $brand-color-5__font);
-}
-
-
-.project__title {
-
+  @include projectN($brand-color-5, $brand-color-5__font, 150px, 650px);
 }
 
 .project__description {

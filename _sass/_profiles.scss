@@ -1,4 +1,3 @@
-$base-color: rgb(50,150,250);
 $icon-scale-factor: 0.5;
 $text-scale-factor: 2;
 
@@ -37,7 +36,7 @@ $text-scale-factor: 2;
     background: none;
     border: none;
     padding: 0;
-    color: darken($base-color, 50%);
+    color: darken($brand-color-1, 50%);
   }
   
   .button__path {

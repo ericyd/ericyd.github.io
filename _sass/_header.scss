@@ -2,8 +2,12 @@ $text-position: $header-height - 75px;
 $text-clip: 25px;
 $margin-top: 0.25em;
 
+$light-text-color: $brand-color-1;
+// $dark-text-color: $brand-color-1__font;
+$dark-text-color: $brand-color-1;
+
 .header {
-  background: $brand-color-1;
+  background: $navbar-background;
 }
 
 .header__logo {
@@ -34,15 +38,15 @@ $margin-top: 0.25em;
     display: none;
     @include for-tablet-landscape-up {
       display: block;
-      color: $brand-color-1__font;
+      color: $dark-text-color;
       clip-path: inset(0px 0px $text-clip 0px);
     }
   }
   
   .header__text--blue {
-    color: $brand-color-1__font;
+    color: $dark-text-color;
     @include for-tablet-landscape-up {
-      color: $brand-color-1;
+      color: $light-text-color;
     }
   }
 }
@@ -80,7 +84,7 @@ $margin-top: 0.25em;
   align-items: center;
   text-decoration: none;
   height: 100%;
-  color: $brand-color-1__font !important;
+  color: $navbar-font !important;
   font-size: 0.75em;
   text-align: center;
   padding: 10px;
@@ -88,7 +92,7 @@ $margin-top: 0.25em;
   border: 0;
 
   &:hover {
-    background: darken($brand-color-1, 10%);
+    background: darken($navbar-background, 10%);
   }
 
   @include for-tablet-portrait-up {

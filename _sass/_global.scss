@@ -49,8 +49,8 @@ a {
   background-color: transparent;
 
   &:focus {
-    color: #000  !important;
-    // background-color: #000;
+    color: #fff  !important;
+    background-color: #000 !important;
   }
 }
 
@@ -74,7 +74,7 @@ h6 {
   font-family: $font-family-title;
   font-weight: 400;
   line-height: 1em;
-  color: $brand-color-1;
+  color: $brand-color-1__font;
 }
 
 h2 {

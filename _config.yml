@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-version: 4
+version: 5
 title: Eric Yancey Dauenhauer
 email: eric@ericyd.com
 headline: Proactive, pragmatic, personable, perceptive, problem-solver.
@@ -25,8 +25,6 @@ accessibility_statement: >
   inaccessible, please get in touch and we will do what we can to resolve
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
-# github_username:  jekyll
 
 # Build settings
 markdown: kramdown
@@ -44,11 +42,11 @@ markdown: kramdown
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
 exclude:
-    - package.json
-    - README.md
-    - node_modules
-#   - Gemfile
-#   - Gemfile.lock
+  - package.json
+  - README.md
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
 #   - vendor/bundle/
 #   - vendor/cache/
 #   - vendor/gems/
