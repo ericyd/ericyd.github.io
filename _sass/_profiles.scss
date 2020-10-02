@@ -2,14 +2,10 @@ $icon-scale-factor: 0.5;
 $text-scale-factor: 2;
 
 .profiles {
-  @include section();
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+  @include tile();
+  
   display: flex;
-  flex-flow: row wrap;
-  background-color: $brand-color-2;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
 

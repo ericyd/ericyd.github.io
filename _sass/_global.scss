@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $font-family-default;
-  color: $brand-color-1;
+  color: $brand-color-1__font;
 
   @media (max-width: 360px) {
     font-size: $font-size-base * 0.75;
@@ -77,9 +77,13 @@ h6 {
   color: $brand-color-1__font;
 }
 
-h2 {
-  font-size: 2em;
-}
 h3 {
   font-size: 1.5em;
+}
+
+.align_left {
+  text-align: left !important;
+  * {
+    text-align: left !important;
+  }
 }

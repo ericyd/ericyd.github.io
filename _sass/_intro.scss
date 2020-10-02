@@ -11,18 +11,9 @@
   flex-flow: column wrap;
   align-content: center;
   align-items: center;
-  min-height: 100vh;
-  // background-color: $brand-color-4;
-  // credit: https://trianglify.io/
-  background: url('trianglify.svg') -150px -150px;
-
-  * {
-    text-align: center;
-  }
 }
 
 .intro__selfie {
-  // width: 5em;
   height: 10em;
   // background: url('/assets/eric_dauenhauer.jpg') 50px 0px no-repeat;
   // clip-path: circle(40%);
@@ -31,26 +22,7 @@
 }
 
 .intro__caption {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  max-width: 320px;
-  font-size: 0.75em;
-  color: $brand-color-4__font;
-}
-
-.intro__hero {
-  font-size: 3em;
-  padding-top: 0;
-  margin-top: 0;
-  color: $brand-color-4__font;
-  margin-bottom: 2em;
-
-  @include for-tablet-portrait-up {
-    margin-bottom: 3em;
-  }
+  text-align: center;
 }
 
 .intro__more-arrow {

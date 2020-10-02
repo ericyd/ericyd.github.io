@@ -84,7 +84,7 @@ $line-height-base: 1.65;
 }
 
 @mixin section {
-  padding: 1.5em 1em;
+  padding: 1.5em 1em 0em 1em;
   margin: 0;
   border: 0;
 
@@ -93,6 +93,42 @@ $line-height-base: 1.65;
   }
 
   @include for-tablet-landscape-up {
-    padding: 2em 4em;
+    padding: 0em;
+  }
+
+  .section__header {
+    text-align: center;
+    margin: 4rem;
+    font-size: 2em;
+
+    @include for-tablet-portrait-up {
+      font-size: 3em;
+    }
+  }
+}
+
+@mixin tile($alignment: center) {
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border: 1px solid #888;
+  max-width: 100%;
+
+  // Flexbox
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: $alignment;
+
+  // min-width: 600px
+  @include for-tablet-portrait-up {
+    width: 500px;
+  }
+
+  // min-width: 900px
+  @include for-tablet-landscape-up {
+    width: 600px;
   }
 }
