@@ -1,19 +1,17 @@
-<section class="intro">
-  <h2 class="section__header">{{ site.data.sections.intro.title }}</h2>
+<h2 class="section__header">{{ site.data.sections.intro.title }}</h2>
 
-  <div class="tile">
-    <svg class="sr-only">
-      <defs>
-        <clipPath id="intro__selfieClip" width="10em">
-          <!-- <circle id="img--selfie__circle" /> -->
-          <circle r="4em" cx="6.25em" cy="4em"/>
-        </clipPath>
-      </defs>
-    </svg>
-    <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="intro__selfie" alt="Eric's face"/>
-    <!-- <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="img--selfie2" /> -->
-    <div class="intro__caption">
-      {{ site.data.sections.intro.description }}
-    </div>
+<div class="tile">
+  <svg class="sr-only">
+    <defs>
+      <clipPath id="intro__selfieClip" width="10em">
+        <!-- <circle id="img--selfie__circle" /> -->
+        <circle r="4em" cx="5.25em" cy="4em"/>
+      </clipPath>
+    </defs>
+  </svg>
+  <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="intro__selfie" alt="Eric's face"/>
+  <!-- <img src="{{ '/assets/eric_dauenhauer.jpg' | relative_url }}" class="img--selfie2" /> -->
+  <div class="intro__caption">
+    {{ site.data.sections.intro.description }}
   </div>
-</section>
+</div>

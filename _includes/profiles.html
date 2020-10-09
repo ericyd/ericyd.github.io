@@ -1,18 +1,16 @@
-<div class="section" id="profiles">
-  <h2 class="section__header">{{ site.data.sections.profiles.title }}</h2>
+<h2 class="section__header">{{ site.data.sections.profiles.title }}</h2>
 
-  <div class="profiles">
-    <p>{{ site.data.sections.profiles.description }}</p>
-    {% for profile in site.data.profiles %}
-      {% if profile.primary %}
-      <div class="button--container">
-        <a href="{{profile.href}}" class="button" title="{{profile.caption}}">
-          <!-- profile-icon -->
-          {% include icons/{{profile.id}}.svg %}
-          <span class="sr-only">{{profile.caption}}</span>
-        </a>
-      </div>
-      {% endif %}
-    {% endfor %}
-  </div>
+<div class="profiles">
+  <p>{{ site.data.sections.profiles.description }}</p>
+  {% for profile in site.data.profiles %}
+    {% if profile.primary %}
+    <div class="button--container">
+      <a href="{{profile.href}}" class="button" title="{{profile.caption}}">
+        <!-- profile-icon -->
+        {% include icons/{{profile.id}}.svg %}
+        <span class="sr-only">{{profile.caption}}</span>
+      </a>
+    </div>
+    {% endif %}
+  {% endfor %}
 </div>

@@ -13,14 +13,12 @@ enable this if spam seems to increase with email being public
 </script>
 -->
 
-<section class="contact">
-  <h2 class="section__header">{{ site.data.sections.contact.title }}</h2>
+<h2 class="section__header">{{ site.data.sections.contact.title }}</h2>
 
-  <div class="tile">
-    <p>{{ site.data.sections.contact.description }}</p>
-    <!-- TODO: add gmail and other webmail links -->
-    <div id="liame" class="contact__email">
-      <span class="sr-only">My email is: </span>{{ site.email }}
-    </div>
+<div class="tile">
+  <p>{{ site.data.sections.contact.description }}</p>
+  <!-- TODO: add gmail and other webmail links -->
+  <div id="liame" class="contact__email">
+    <span class="sr-only">My email is: </span>{{ site.email }}
   </div>
-</section>
+</div>

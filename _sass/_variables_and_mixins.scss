@@ -98,11 +98,16 @@ $line-height-base: 1.65;
 
   .section__header {
     text-align: center;
-    margin: 4rem;
     font-size: 2em;
-
+    margin: 0rem 2rem 4rem 2rem;
+      
     @include for-tablet-portrait-up {
       font-size: 3em;
+      margin: 2rem 2rem 4rem 2rem;
+    }
+
+    @include for-tablet-landscape-up {
+      margin: 4rem;
     }
   }
 }
