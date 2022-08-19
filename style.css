@@ -1,3 +1,11 @@
+:root {
+  /* Shamelessly stolen from https://www.worksinprogress.co/ */
+  --text: #2D2828;
+  --background: #fff7f4;
+  --link: royalblue;
+  --divider: rgba(110, 110, 110, 0.8);
+}
+
 html,
 body {
   box-sizing: border-box;
@@ -7,8 +15,8 @@ body {
   font-family: "Inconsolata", "Source Code Pro", "IBM Plex Mono", "Andale Mono", "DejaVu Sans Mono", "Consolas", "Roboto Mono", "Hack", monospace;
   font-size: 10px;
   /* Shamelessly stolen from https://www.worksinprogress.co/ */
-  color: #2D2828;
-  background-color: #fff7f4;
+  color: var(--text);
+  background-color: var(--background);
 }
 
 section {
@@ -37,7 +45,7 @@ p {
 .divider {
   width: 5rem;
   height: 0.5rem;
-  border-bottom: 0.5rem dotted rgba(110, 110, 110, 0.8);
+  border-bottom: 0.5rem dotted var(--divider);
   margin: 0 auto;
 }
 
@@ -60,24 +68,15 @@ a,
 a:visited,
 a:link {
   text-decoration: none;
-  border-bottom: 0.5rem solid royalblue;
-  color: royalblue;
+  border-bottom: 0.5rem solid var(--link);
+  color: var(--link);
 }
 
 @media (prefers-color-scheme: dark) {
-  html {
-    background-color: #2D2828;
-    color: rgb(240, 240, 240);
-  }
-
-  a,
-  a:visited,
-  a:link {
-    border-bottom: 0.5rem solid rgb(150, 175, 249);
-    color: rgb(150, 175, 249);
-  }
-
-  .divider {
-    border-bottom: 0.5rem dotted rgba(211, 211, 211, 0.8);
+  :root {
+    --text: rgb(240, 240, 240);
+    --background: #2D2828;
+    --link: rgb(150, 175, 249);
+    --divider: rgba(211, 211, 211, 0.8);
   }
 }
