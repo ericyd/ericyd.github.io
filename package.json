@@ -4,7 +4,10 @@
   "description": "just some html n stuff",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf build",
+    "build": "./build.sh",
+    "prepublish": "npm run clean && npm run build && npx wrangler login",
+    "publish": "export $(cat .env) && CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID npx wrangler pages publish build --project-name ericyd --env production --branch main"
   },
   "repository": {
     "type": "git",
