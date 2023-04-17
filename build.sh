@@ -11,6 +11,7 @@ favicon.ico
 twitter
 twittier
 assets
+generative-art
 )
 
 mkdir -p build
