@@ -51,6 +51,14 @@ p {
   padding: 2rem;
 }
 
+ul {
+  width: 100%;
+  max-width: min(60rem, 85vw);
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 4.3rem;
+}
+
 .divider {
   width: 5rem;
   height: 0.5rem;
