@@ -8,10 +8,8 @@ FILES_TO_COPY=(
 index.html
 style.css
 favicon.ico
-twitter
-twittier
 assets
-generative-art
+_redirects
 )
 
 mkdir -p build
