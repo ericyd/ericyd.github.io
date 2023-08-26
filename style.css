@@ -2,7 +2,8 @@
   /* Shamelessly stolen from https://www.worksinprogress.co/ */
   --text: #18181b;
   --background: #f9fafb;
-  --link: royalblue;
+  --link: rgb(65, 105, 225);
+  --link-50: rgb(65, 105, 225, 50%);
   --divider: rgba(110, 110, 110, 0.8);
 }
 
@@ -11,6 +12,7 @@
     --text: rgb(240, 240, 240);
     --background: #2D2828;
     --link: rgb(178, 196, 250);
+    --link-50: rgb(178, 196, 250, 50%);
     --divider: rgba(211, 211, 211, 0.8);
   }
 }
@@ -88,8 +90,14 @@ ol {
 a,
 a:visited,
 a:link {
-  text-decoration: none;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none; /* do not skip descenders */
+  text-decoration-color: var(--link-50);
+  text-decoration-thickness: 0.5rem;
   display: inline-block;
-  border-bottom: 0.2rem solid var(--link);
   color: var(--link);
+}
+
+a:hover {
+  text-decoration-color: var(--link);
 }
