@@ -10,6 +10,7 @@ style.css
 favicon.ico
 assets
 _redirects
+salami
 )
 
 mkdir -p build

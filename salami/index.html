@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salami is a dog</title>
+  <meta property="og:title" content="Salami is a dog">
+  <meta itemprop="name" content="Salami is a dog">
+  <meta property="og:description" content="And cute as hell.">
+  <meta itemprop="description" content="And cute as hell.">
+  <meta name="image" property="og:image" content="https://res.cloudinary.com/ericyd/image/upload/c_scale,w_1000/v1696098759/Salami/20220730_135007_cky2is.jpg">
+  
+  <style>
+    body {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 36pt;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      max-width: 100%;
+      padding: 0 1rem;
+      margin: 0 auto;
+    }
+
+    .card {
+      width: 300px;
+      height: 300px;
+      margin-bottom: 1em;
+    }
+
+    .image {
+      width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Salami is a dog</h1>
+
+  <div class="cards" id="cards">
+    <!-- populated dynamically from data in images.json -->
+  </div>
+
+  <script>
+    const urls = [
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099496/Salami/20210411_135804_otpg9s.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099422/Salami/20210508_214849_nij5ui.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099379/Salami/20210613_193106_lcvzve.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099371/Salami/20210613_193133_o46vqn.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099301/Salami/20210829_160647_j2zyjf.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099292/Salami/20210831_112343_v8h9qz.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099265/Salami/20211021_213718_gub4y7.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099251/Salami/20211103_143139_kaiolu.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099206/Salami/20220107_181301_upke7w.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099126/Salami/20220302_182151_cjmd8q.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099092/Salami/20220402_153542_nqh6ly.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099068/Salami/20220405_152855_dttkaw.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099019/Salami/20220425_221802_zhm3s5.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696099003/Salami/20220502_220943_d6ke5a.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098914/Salami/20220701_152512_qq9shz.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098888/Salami/20220703_142636_fk7yhh.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098842/Salami/20220704_115048_wus87c.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098763/Salami/20220730_135016_tddief.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098759/Salami/20220730_135007_cky2is.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098649/Salami/20220731_125118_irnvpz.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098579/Salami/20220831_212949_rrxbip.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098571/Salami/20220901_202620_hpe6wv.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098567/Salami/20220902_135812_kwypjd.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098545/Salami/20220905_211156_tsqdgy.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098513/Salami/20220923_221109_sd0oph.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098501/Salami/20220929_170155_r0fktr.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098496/Salami/20220925_164819_gvzxqn.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098481/Salami/20221002_171743_g8vqg5.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098450/Salami/20221011_215626_lcbgjw.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098421/Salami/20221021_132437_goz3y8.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098394/Salami/20221030_131840_ppoeo4.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098376/Salami/20221103_125754_ppg0r1.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098355/Salami/20221127_204010_tvsh3y.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098347/Salami/20221205_115244_cr6kjt.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098332/Salami/20221213_210627_wrgqjh.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098299/Salami/20230104_112256_nvjb5p.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098285/Salami/20230111_192709_m8pftb.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098276/Salami/20230111_215718_szzxk1.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098237/Salami/20230116_214608_bpe2yh.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098222/Salami/20230214_095220_t5jits.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098218/Salami/20230213_215953_b8iib5.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098204/Salami/20230217_205511_mjkn5f.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098195/Salami/20230217_205614_bsk0au.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098168/Salami/20230303_230648_h6nibf.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098154/Salami/20230315_144101_xb6ivm.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098130/Salami/20230319_211232_he4url.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098119/Salami/20230402_153349_qzn5dl.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098112/Salami/20230405_220415_ez10yy.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098104/Salami/20230411_192736_oxyd4u.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098086/Salami/20230415_235736_m4vvpr.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098073/Salami/20230428_200205_ceruug.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098058/Salami/20230508_211620_ehokgg.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098049/Salami/20230504_153152_uvf0ad.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098030/Salami/20230527_162852_usdmk0.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098020/Salami/20230606_182232_vnf05u.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098008/Salami/IMG_0817_kyo3q8.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097999/Salami/IMG_8934_hkk6yx.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097990/Salami/signal-2022-07-03-14-43-20-203_nhpzft.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097985/Salami/signal-2023-02-18-00-00-08-635_pafhmr.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097979/Salami/20230624_170505_i9wvjy.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097976/Salami/20230625_114052_prv4so.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097945/Salami/20230803_193806_wykie5.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097941/Salami/20230803_193801_hc7cnz.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097928/Salami/20230803_193804_fxms9a.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097919/Salami/20230815_180613_crsuts.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097915/Salami/20230818_064250_hfhlqg.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696097843/Salami/20230920_215321_qjj6xy.jpg',
+    ].map(urlString => {
+      const url = new URL(urlString)
+      const modifiedPath = url.pathname.split('/')
+      // add in Cloudinary scaling to save bandwidth
+      url.pathname = modifiedPath.slice(0, 4).concat('c_scale,w_500', modifiedPath.slice(4)).join('/')
+      return url
+    })
+
+    const cardsContainer = document.getElementById("cards")
+    urls.forEach(populateImage(cardsContainer))
+
+    /**
+     * @param {HTMLElement} cardsContainer
+     */
+    function populateImage(cardsContainer) {
+      /**
+       * @param {string} url
+       */
+      return (url) => {
+        const container = document.createElement("div")
+        container.classList.add("card")
+        const img = document.createElement("img")
+        img.classList.add('image')
+        img.src = url
+        container.appendChild(img)
+        cardsContainer.appendChild(container)
+      }
+    }
+  </script>
+</body>
+</html>

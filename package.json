@@ -4,6 +4,7 @@
   "description": "just some html n stuff",
   "main": "index.js",
   "scripts": {
+    "dev": "http-server",
     "login": "npx wrangler login",
     "clean": "rm -rf build",
     "build": "./build.sh",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://github.com/ericyd/ericyd.github.io#readme",
   "dependencies": {
+    "http-server": "^14.1.1",
     "wrangler": "^2.15.1"
   }
 }
