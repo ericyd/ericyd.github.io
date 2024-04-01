@@ -11,6 +11,7 @@ favicon.ico
 assets
 _redirects
 salami
+music
 )
 
 mkdir -p build
