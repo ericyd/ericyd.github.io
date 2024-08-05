@@ -33,6 +33,7 @@
       max-width: 100%;
       margin: 0 auto;
       gap: 2px;
+      justify-content: center;      
     }
 
     .column {
@@ -222,10 +223,14 @@
 
     function calculateColumns() {
       const width = getWidth();
-      const idealWidth = 304; // 300px + 2px border on both sides
-      const numColumns = Math.floor(width / idealWidth);
-      const columnWidth = Math.floor(width / numColumns) - 4; // minus 4 for gap
-      return [numColumns, columnWidth]
+       // 300px + 2px border on both sides
+      const idealWidth = 304;
+      const calculatedNumColumns = Math.floor(width / idealWidth);
+      // phones often calculate to 1 row, but look better with 2
+      const numColumns = Math.max(2, calculatedNumColumns);
+      // minus 4 for gap
+      const columnWidth = Math.floor(width / numColumns) - 4;
+      return [numColumns, columnWidth];
     }
 
     function getWidth() {
