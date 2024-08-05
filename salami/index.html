@@ -29,23 +29,30 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-around;
+      align-items: flex-start;
       max-width: 100%;
-      padding: 0 1rem;
       margin: 0 auto;
+      gap: 2px;
     }
 
-    .card {
-      width: 300px;
-      height: 300px;
-      margin-bottom: 1em;
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
     }
 
     .image {
       width: 100%;
       max-height: 100%;
       object-fit: contain;
+      transition: opacity 0.2s ease-in;
+      opacity: 0;
+    }
+
+    .opaque {
+      opacity: 1;
     }
   </style>
 </head>
@@ -151,24 +158,84 @@
       })
 
     const cardsContainer = document.getElementById("cards")
-    urls.forEach(populateImage(cardsContainer))
+    const [numColumns, columnWidth] = calculateColumns()
+    const columns = Array.from({ length: numColumns }, createColumn(columnWidth))
+    urls.forEach(populateImage(cardsContainer, columnWidth, columns))
+    
+    for (const column of columns) {
+      cardsContainer.appendChild(column)
+    }
 
     /**
      * @param {HTMLElement} cardsContainer
+     * @param {number} columnWidth
+     * @param {HTMLElement[]} columns
      */
-    function populateImage(cardsContainer) {
+    function populateImage(cardsContainer, columnWidth, columns) {
       /**
        * @param {string} url
+       * @param {number} index
        */
-      return (url) => {
-        const container = document.createElement("div")
-        container.classList.add("card")
+      return (url, index) => {
+        const anchor = document.createElement("a")
+        anchor.href = url
+        anchor.target = "_blank"
         const img = document.createElement("img")
         img.classList.add('image')
         img.src = url
-        container.appendChild(img)
-        cardsContainer.appendChild(container)
+        anchor.appendChild(img)
+        
+        // naturalHeight / naturalWidth is not available until image loads.
+        // makes sense, but adds noise to the code.
+        img.addEventListener('load', (event) => {
+          const height = img.naturalHeight
+          const width = img.naturalWidth
+          const aspectRatio = width / height
+          const newHeight = columnWidth / aspectRatio
+          img.style.height = `${newHeight}px`
+          anchor.style.height = `${newHeight}px`
+          img.style.width = `${columnWidth}px`
+          img.style['transition-delay'] = `${index * 0.04}s`;
+
+          // naive: insert into "first" column
+          // columns[index % numColumns].appendChild(img);
+          
+          // better: insert into "shortest" column
+          const shortestColumn = columns.reduce((acc, column) => {
+            return column.offsetHeight < acc.offsetHeight ? column : acc
+          }, columns[0])
+          shortestColumn.appendChild(anchor)
+          
+          setTimeout(() => img.classList.add('opaque'), 1)
+        })
       }
+    }
+
+    function createColumn(columnWidth) {
+      return () => {
+        const column = document.createElement("div")
+        column.classList.add("column")
+        column.style.width = `${columnWidth}px`
+        return column
+      }
+    }
+
+    function calculateColumns() {
+      const width = getWidth();
+      const idealWidth = 304; // 300px + 2px border on both sides
+      const numColumns = Math.floor(width / idealWidth);
+      const columnWidth = Math.floor(width / numColumns) - 4; // minus 4 for gap
+      return [numColumns, columnWidth]
+    }
+
+    function getWidth() {
+      return Math.max(
+        document.body.scrollWidth,
+        document.documentElement.scrollWidth,
+        document.body.offsetWidth,
+        document.documentElement.offsetWidth,
+        document.documentElement.clientWidth
+      );
     }
   </script>
 </body>
