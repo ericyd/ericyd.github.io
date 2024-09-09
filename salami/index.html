@@ -89,7 +89,7 @@
       'https://res.cloudinary.com/ericyd/image/upload/v1696098513/Salami/20220923_221109_sd0oph.jpg',
       'https://res.cloudinary.com/ericyd/image/upload/v1696098501/Salami/20220929_170155_r0fktr.jpg',
       'https://res.cloudinary.com/ericyd/image/upload/v1696098496/Salami/20220925_164819_gvzxqn.jpg',
-      'https://res.cloudinary.com/ericyd/image/upload/v1696098481/Salami/20221002_171743_g8vqg5.jpg',
+      'https://res.cloudinary.com/ericyd/image/upload/v1696098481/Salami/20221002_171743_g8vqg5.jpg', // a_-180
       'https://res.cloudinary.com/ericyd/image/upload/v1696098450/Salami/20221011_215626_lcbgjw.jpg',
       'https://res.cloudinary.com/ericyd/image/upload/v1696098421/Salami/20221021_132437_goz3y8.jpg',
       'https://res.cloudinary.com/ericyd/image/upload/v1696098394/Salami/20221030_131840_ppoeo4.jpg',
@@ -168,7 +168,8 @@
         const url = new URL(urlString)
         const modifiedPath = url.pathname.split('/')
         // add in Cloudinary scaling to save bandwidth
-        url.pathname = modifiedPath.slice(0, 4).concat('c_scale,w_500', modifiedPath.slice(4)).join('/')
+        const modification = modifiedPath[modifiedPath.length - 1] === '20221002_171743_g8vqg5.jpg' ? 'c_scale,w_500,a_-180' : 'c_scale,w_500';
+        url.pathname = modifiedPath.slice(0, 4).concat(modification, modifiedPath.slice(4)).join('/')
         return url
       })
 
