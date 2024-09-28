@@ -12,6 +12,7 @@ assets
 _redirects
 salami
 music
+resume
 )
 
 mkdir -p build
