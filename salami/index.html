@@ -162,7 +162,7 @@
       'https://res.cloudinary.com/ericyd/image/upload/v1725911423/Salami/20240815_165942_esna7b.jpg',
       'https://res.cloudinary.com/ericyd/image/upload/v1725911455/Salami/20240818_145056_svunjr.jpg',
     ]
-    const urls = publicUrls
+    const baseUrls = publicUrls
       .concat(new URLSearchParams(window.location.search).get('private') === 'true' ? privateUrls : [])
       .map(urlString => {
         const url = new URL(urlString)
@@ -173,6 +173,7 @@
         return url
       })
 
+    const urls = shuffle(baseUrls)
     const cardsContainer = document.getElementById("cards")
     const [numColumns, columnWidth] = calculateColumns()
     const columns = Array.from({ length: numColumns }, createColumn(columnWidth))
@@ -256,6 +257,36 @@
         document.documentElement.offsetWidth,
         document.documentElement.clientWidth
       );
+    }
+
+    /**
+     * Shuffle an array.
+     * Returns a new array, does *not* modify in place.
+     * @template T
+     * @param {Array<T>} arr
+     * @param {Rng} rng 
+     * @returns {Array<T>}
+     */
+    function shuffle(arr, rng = Math.random) {
+      const copy = [...arr]; // create a copy of original array
+      for (let i = copy.length - 1; i; i--) {
+        const randomIndex = Math.floor(random(0, i + 1, rng));
+        [copy[i], copy[randomIndex]] = [copy[randomIndex], copy[i]]; // swap
+      }
+      return copy;
+    }
+
+    /**
+     * @param {number} min 
+     * @param {number} max 
+     * @param {Rng} rng 
+     * @returns {number}
+     */
+    function random(min, max, rng = Math.random) {
+      if (min > max) {
+        [min, max] = [max, min];
+      } // swap values
+      return min + rng() * (max - min);
     }
   </script>
 </body>
