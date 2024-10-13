@@ -28,7 +28,7 @@
   
   body {
     font-family: var(--body-font-family);
-    font-size: 10px;
+    font-size: 13px;
     padding: 0;
     margin: 0;
     color: var(--color-1);
@@ -41,7 +41,7 @@
   .page {
     box-shadow: 0px 3px 8px 0px #cccccc;
     max-width: var(--page-width);
-    margin: 3em auto;
+    margin: 0 auto;
     padding-bottom: 3em;
   }
   
@@ -186,7 +186,7 @@
     margin: 0;
     padding: 0.1em var(--margin-left) 0.1em var(--margin-right);
     color: var(--color-1);
-    font-size: 10px;
+    font-size: 0.75em;
     display: block;
   }
   
@@ -374,6 +374,10 @@
       --page-width: 800px;
     }
   
+    body {
+      font-size: 10px;
+    }
+  
     .header {
       display: block;
       margin: 0 auto;
@@ -409,10 +413,18 @@
       align-items: center;
       flex-direction: row;
     }
+  
+    .page {
+      margin: 3em auto;
+    }
   }
   
   
   @media print {
+    body {
+      font-size: 10px;
+    }
+  
     .web-resume {
       display: none;
     }
