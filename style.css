@@ -101,3 +101,7 @@ a:link {
 a:hover {
   text-decoration-color: var(--link);
 }
+
+img {
+  max-width: 100%;
+}
