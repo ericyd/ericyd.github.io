@@ -14,6 +14,7 @@ salami
 music
 resume
 open-the-sky-ep
+bar
 )
 
 mkdir -p build
