@@ -15,6 +15,7 @@ music
 resume
 open-the-sky-ep
 bar
+tattoo
 )
 
 mkdir -p build
