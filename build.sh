@@ -13,7 +13,6 @@ _redirects
 salami
 music
 resume
-open-the-sky-ep
 )
 
 mkdir -p build
