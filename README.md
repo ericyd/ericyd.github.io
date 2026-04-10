@@ -5,7 +5,6 @@ just some html n stuff
 ## Setup
 
 ```shell
-cp .env.sample .env # and then populate
 npm i
 ```
 
