@@ -4,7 +4,7 @@ pnpm = "11"
 
 [tasks.deploy]
 run = """
-npm run clean
-npm run build
-wrangler pages deploy build --project-name ericyd
+pnpm run clean
+pnpm run build
+pnpm wrangler pages deploy build --project-name ericyd
 """
